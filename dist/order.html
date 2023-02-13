@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Logos/order</title>
+	<meta charset="UTF-8">
+	<!-- Не обов'язковий мета-тег для ІЕ (Internet Explorer) та його версії (Edge (можливі також версії  ..., IE8, IE9, IE10, IE11)) -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230213215522">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- Кодування сторінки: ширина області перегляду така ж, як і ширина екрану; зум за замовчуванням 100%; заборона масштабувати контент користувачу -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="Доставка блюд">
+	<meta name="description" content="Доставка блюд за 60 минут">
+	<meta name="author" content="okotovenko">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class='header__menu menu-header'>
+					<button type='button' class='menu-header__icon icon-menu'> <span></span></button>
+					<p>меню</p>
+					<nav class='menu-header__body'>
+						<ul class='menu-header__list'>
+							<li class='menu-header__item'><a href='#' class='menu-header__link'>О ресторане</a></li>
+							<li class='menu-header__item'><a href='#' class='menu-header__link'>Условия доставки</a></li>
+							<li class='menu-header__item'><a href='#' class='menu-header__link'>Возврат товара</a></li>
+							<li class='menu-header__item'><a href='#' class='menu-header__link'>Акции</a></li>
+						</ul>
+					</nav>
+				</div>
+				<a href='index.html' class='header__logo logo'>logos</a>
+				<form class="header__form form-header" action="#" method="post">
+					<span class="_icon-location"></span>
+					<input class="form-header__input" type="text" placeholder="Введите адрес доставки">
+					<button class="form-header__search _icon-search" type="submit"></button>
+				</form>
+				<div class="header__contacts contacts-header">
+					<div class="contacts-header__left _icon-phone-call"></div>
+					<div class="contacts-header__right">
+						<p class="contacts-header__text text">Контакты:</p>
+						<a class="contacts-header__text text-white" href="tel: +38 (099) 999-57-59">+38 (099) 999-57-59</a>
+					</div>
+				</div>
+				<form class="bask" action="basket.html">
+					<button class="header__basket basket-header button" type="submit">
+						<span class="_icon-shopping-cart"></span>
+						<p class="basket-header__text ">Корзина</p>
+						<input data-quantity-cart class="basket-header__number" type="text" name="" value="0">
+					</button>
+				</form>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__menu menu">
+				<div class="menu__container">
+					<ul data-simplebar class="menu__ul">
+						<li class="menu__li"><a href="#" class="menu__link">Холодные закуски</a></li>
+						<li class="menu__li"><a href="#" class="menu__link">Горячие закуски</a></li>
+						<li class="menu__li"><a href="#" class="menu__link">Мясные блюда</a></li>
+						<li class="menu__li"><a href="#" class="menu__link">Супы</a></li>
+						<li class="menu__li"><a href="#" class="menu__link">Рыбные блюда</a></li>
+						<li class="menu__li"><a href="#" class="menu__link">Гриль меню</a></li>
+						<li class="menu__li"><a href="#" class="menu__link">Фирменные блюда</a></li>
+						<li class="menu__li"><a href="#" class="menu__link">Напитки</a></li>
+					</ul>
+				</div>
+			</section>
+			<section class="page__order order">
+				<div class="order__container">
+					<h2 class="order__title title">оформление заказа
+						<a href="basket.html" class="order__back back _icon-Arrow">
+							<p>в корзину</p>
+						</a>
+					</h2>
+					<form action="files/sendmail/sendmail.php" method="POST" class="order__form form-order">
+						<div class="form-order__1 form-order-1">
+							<p class="form-order-1__subtitle subtitle">1. Контактная информация</з>
+							<div class="form-order-1__row">
+								<div class="form-order-1__box box">
+									<input data-required id="i-1" type="text" class="form-order-1__name" required name="name">
+									<label for="i-1" class="form-order-1__label form-order__label">Имя<span>*</span></label>
+								</div>
+								<div class="form-order-1__box box">
+									<input data-required id="i-2" type="text" class="form-order-1__name" required name="phone">
+									<label for="i-2" class="form-order-1__label form-order__label">Телефон<span>*</span></label>
+								</div>
+							</div>
+						</div>
+						<div class="form-order__2 form-order-2">
+							<p class="form-order-2__subtitle subtitle">2. Доставка</p>
+							<div class="form-order-2__top">
+								<div class="form-order-2__body">
+									<input type="radio" name="delivery" id="r-1" checked>
+									<label for="r-1" class="radio">Доставка</label>
+									<input type="radio" name="delivery" id="r-2">
+									<label for="r-2" class="radio">Самовывоз</label>
+								</div>
+								<p class="_icon-clock-1">Доставим через 1 час 30 минут</p>
+							</div>
+							<p class="form-order-2__subtitle subtitle">Адрес доставки</p>
+							<div class="form-order-2__bottom">
+								<div class="form-order-2__box box">
+									<input data-required id="i-3" type="text" class="form-order-2__name" required name="street">
+									<label for="i-3" class="form-order-2__label form-order__label">Укажите
+										улицу<span>*</span></label>
+								</div>
+								<div class="form-order-2__box box">
+									<input data-required id="i-4" type="text" class="form-order-2__name" required name="house">
+									<label for="i-4" class="form-order-2__label form-order__label">Номер
+										дома<span>*</span></label>
+								</div>
+								<input type="text" class="form-order-2__name" placeholder="№ квартиры/офиса" name="flat">
+								<input type="text" class="form-order-2__name" placeholder="Подъезд" name="entrance">
+								<input type="text" class="form-order-2__name" placeholder="Этаж" name="floor">
+								<textarea class="form-order-2__name" placeholder="Комментарий" name="coment"></textarea>
+							</div>
+						</div>
+						<div class="form-order__3 form-order-3">
+							<p class="form-order-3__subtitle subtitle">3. Оплатить</p>
+							<div class="form-order-3__top">
+								<input type="radio" name="payment" id="r-3" checked>
+								<label for="r-3" class="radio">Оплата онлайн</label>
+								<input type="radio" name="payment" id="r-4">
+								<label for="r-4" class="radio">Курьеру картой</label>
+								<input type="radio" name="payment" id="r-5">
+								<label for="r-5" class="radio">Наличными</label>
+							</div>
+							<input type="text" class="form-order-3__name" placeholder="Сдача с" name="change">
+						</div>
+						<div class="form-order__4 form-order-4">
+							<p class="form-order-4__subtitle subtitle">4. Когда доставить</p>
+							<div class="form-order-4__top">
+								<div class="form-order-4__body">
+									<input type="radio" name="time" id="r-6" checked>
+									<label for="r-6" class="radio">В ближайшее время</label>
+									<input type="radio" name="time" id="r-7">
+									<label for="r-7" class="radio">Ко времени</label>
+								</div>
+								<div class="form-order-4__date">
+									<input data-datepicker type="text" name="date" id="date">
+									<label for="date" class="date">Укажите время</label>
+								</div>
+							</div>
+							<div data-quantity-form class="form-order-4__quantity form-order-4-quantity">
+								<p>Кол-во персон</p>
+								<button data-quantity-form-minus type="button" class="form-order-4-quantity__button form-order-4-quantity__button_minus">-</button>
+								<div class="form-order-4-quantity__input">
+									<input data-quantity-form-value type="text" name="" value="1">
+								</div>
+								<button data-quantity-form-plus type="button" class="form-order-4-quantity__button form-order-4-quantity__button_plus">+</button>
+							</div>
+							<p class="form-order-4__subtitle subtitle">Хотите мы позвоним?</p>
+							<div class="form-order-4__want">
+								<input type="radio" name="call" id="r-8" checked>
+								<label for="r-8" class="radio">Не перезванивать</label>
+								<input type="radio" name="call" id="r-9">
+								<label for="r-9" class="radio">Потребуется звонок оператора</label>
+							</div>
+						</div>
+						<div class="form-order__5 form-order-5">
+							<input type="checkbox" name="checkbox" id="check" checked>
+							<label for="check">Я согласен на обработку моих перс. данных в
+								соответствии с <a href="#">Условиями</a></label>
+							<button type="submit" class="form-order-5__button button">Оформить заказ</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__centr">
+					<a href='index.html' class='footer__logo logo'>logos</a>
+					<p class="footer__rights">© ООО СК «АПШЕРОН» Все права защищены. 2010-2020</p>
+					<a class="footer__agreement" href="#">Пользовательское соглашение</a>
+					<a class="footer__agreement" href="#">Карта сайта</a>
+					<a class="footer__agreement" href="#">Политика конфиденциальности</a>
+				</div>
+				<div class="footer__menu">
+					<ul>
+						<li class="footer__link"><a href="#">О ресторане</a></li>
+						<li class="footer__link"><a href="conditions.html">Условия доставки</a></li>
+						<li class="footer__link"><a href="#">Возврат товара</a></li>
+						<li class="footer__link"><a href="stock.html">Акции</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<div class="wrapper__container">
+			<a class="wrapper-up _icon-Arrow" title="Вверх"></a>
+		</div>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<script src="js/app.min.js?_v=20230213215522"></script>
+</body>
+
+</html>
